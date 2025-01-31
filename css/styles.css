@@ -83,6 +83,163 @@
   --bs-highlight-bg: #faf4e0;
 }
 
+/* Product Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.03);
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-title {
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Price Styles */
+.d-flex.flex-row h5 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.text-danger s {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 0.5rem 1.25rem;
+}
+
+.btn-primary:hover {
+  background-color: #50817e; /* Darker shade of primary */
+  border-color: #50817e;
+}
+
+.btn-light {
+  border-color: #dee2e6;
+}
+
+/* Wishlist Button */
+.icon-hover:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.fa-heart.text-secondary {
+  color: #dee2e6 !important;
+  transition: color 0.3s ease;
+}
+
+.fa-heart.text-secondary:hover {
+  color: var(--danger-color) !important;
+}
+
+/* Filter Sidebar */
+.accordion-button:not(.collapsed) {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.accordion-body {
+  padding: 1rem;
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Pagination */
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.page-link {
+  color: var(--primary-color);
+}
+
+.page-link:hover {
+  color: #50817e;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 250px;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .d-flex.flex-row h5 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 200px;
+  }
+  
+  .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .fa-heart {
+    font-size: 1rem !important;
+  }
+}
+
+/* Custom Utilities */
+.shadow-2-strong {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+.pt-3 {
+  padding-top: 1rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
 *,
 *::before,
 *::after {
@@ -97,6 +254,7 @@
 
 body {
   margin: 0;
+  padding-top: 70px; /* Sesuaikan dengan tinggi navbar */
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
@@ -3796,6 +3954,20 @@ textarea.form-control-lg {
 .tab-content > .active {
   display: block;
 }
+
+.navbar-custom {
+  background: rgba(0, 0, 0, 0.1); /* Sedikit gelap transparan */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: black !important; /* Teks navbar menjadi hitam */
+}
+
+.navbar-custom .nav-link:hover {
+  color: #555 !important; /* Warna lebih gelap saat hover */
+}
+
 
 .navbar {
   --bs-navbar-padding-x: 0;
@@ -11069,7 +11241,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("/img/3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
